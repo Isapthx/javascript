@@ -1,0 +1,62 @@
+Fase 1: Os Fundamentos (Entendendo o Motor)
+Antes de usar ferramentas que facilitam o trabalho, você precisa entender como o Node.js funciona por baixo dos panos.
+
+Conceitos-chave: Terminal, módulos nativos do Node, assincronismo, ciclo de requisição e resposta.
+
+Projeto 1: O Gerador de Piadas (CLI - Command Line Interface)
+
+O que fazer: Um script simples executado no terminal que lê um arquivo de texto (usando o módulo fs nativo do Node) contendo piadas e exibe uma aleatória no console.
+
+Objetivo: Aprender a rodar JavaScript fora do navegador e ler arquivos.
+
+Projeto 2: Servidor "Eco" em Node Puro
+
+O que fazer: Usar o módulo http nativo para criar um servidor web básico. Se você acessar localhost:3000/ola, ele deve retornar um texto dizendo "Você acessou a rota /ola".
+
+Objetivo: Entender o que é um servidor, uma porta (port), uma requisição (Request) e uma resposta (Response).
+
+Fase 2: O Padrão de Mercado (Express.js e APIs REST)
+Ninguém cria servidores complexos usando o Node puro. O mercado usa frameworks para facilitar a vida, e o Express.js é o rei absoluto.
+
+Conceitos-chave: Express, Rotas, Métodos HTTP (GET, POST, PUT, DELETE), JSON, Middlewares.
+
+Projeto 3: API de Lista de Tarefas (To-Do List) em Memória
+
+O que fazer: Criar uma API RESTful onde você pode adicionar uma tarefa, listar todas, atualizar (marcar como concluída) e deletar.
+
+O truque: Aqui, você não vai usar banco de dados ainda. Salve tudo em um simples Array (lista) no próprio código. Se reiniciar o servidor, os dados somem.
+
+Objetivo: Dominar o padrão CRUD (Create, Read, Update, Delete) e o uso do formato JSON.
+
+Fase 3: Memória Permanente (Bancos de Dados)
+Chegou a hora de fazer os dados sobreviverem quando o servidor for desligado.
+
+Conceitos-chave: SQL (PostgreSQL, MySQL) vs NoSQL (MongoDB), ORMs (ferramentas como Prisma ou Mongoose para falar com o banco usando JavaScript).
+
+Projeto 4: Catálogo de Livros ou Filmes
+
+O que fazer: Uma API para cadastrar livros (título, autor, ano). Desta vez, você vai conectar sua aplicação Express a um banco de dados real (recomendo usar SQLite no início para não precisar instalar nada pesado, junto com a ferramenta Prisma ORM).
+
+Objetivo: Aprender a modelar dados, conectar o Node a um banco externo e fazer consultas reais.
+
+Fase 4: Segurança e Controle de Acesso
+Em sistemas reais, nem todo mundo pode deletar ou criar informações. Precisamos saber quem está fazendo a requisição.
+
+Conceitos-chave: Criptografia de senhas (bcrypt), Tokens de acesso (JWT - JSON Web Token), Autenticação e Autorização.
+
+Projeto 5: Sistema de Login e Cadastro (Auth API)
+
+O que fazer: Uma API onde o usuário pode criar uma conta (enviando email e senha). O servidor deve salvar a senha de forma criptografada. Depois, o usuário faz o "Login" e recebe um Token. Algumas rotas do servidor só poderão ser acessadas se o usuário enviar esse Token.
+
+Objetivo: Aprender o básico de segurança digital e proteção de rotas privadas no backend.
+
+Fase 5: Profissionalizando (Arquitetura, Testes e Deploy)
+Agora você sabe construir tudo. Falta organizar, garantir que não vai quebrar e colocar na internet.
+
+Conceitos-chave: Arquitetura MVC (Model-View-Controller), Variáveis de Ambiente (.env), Testes Automatizados (Jest) e Deploy.
+
+Projeto 6: Mini-Clone do Twitter (Projeto Final)
+
+O que fazer: Juntar tudo o que aprendeu. Um sistema onde usuários se cadastram, fazem posts, e podem ver os posts uns dos outros.
+
+O diferencial: O código deve estar bem organizado em pastas separadas (Rotas, Controladores, Serviços). Você deve hospedar esse projeto de graça na internet (em serviços como Render ou Railway) para que qualquer pessoa do mundo possa acessar sua API.
