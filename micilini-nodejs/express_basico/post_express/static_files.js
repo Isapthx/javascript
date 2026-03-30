@@ -1,0 +1,29 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.use(express.static('public'));
+
+app.get('/',(req, res) => {
+    res.status(200);
+    const html = `
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Meu Primeiro Servidor com Express</title>
+            <link rel="stylesheet" href="/home.css">
+        </head>
+        <body>
+            <h1>Bem-vindo ao Meu Primeiro Servidor com Express =D</h1>
+            <p>Este é um exemplo de como usar arquivos estáticos com Express.</p>
+        </body>
+    </html>
+    `
+    res.send(html);
+})
+
+app.listen(port, () => {
+    console.log(`Servidor está rodando em http://localhost:${port}/`);
+})
